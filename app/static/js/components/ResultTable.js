@@ -38,7 +38,7 @@ export default class ResultTable extends React.Component {
                         { object.title }
                       </td>
                       <td>
-                        { object.wages }
+                        { object.wage }
                       </td>
                       <td>
                         { object.year }

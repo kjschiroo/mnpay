@@ -39,7 +39,7 @@ def main(input_file, output_file, year):
                       "DEPT_NM",
                       "JOB_DESC",
                       "ALLWAGES"]]
-    refined.columns = ["AGENCY", "DEPT", "TITLE", "WAGES"]
+    refined.columns = ["AGENCY", "DEPT", "TITLE", "WAGE"]
     empl_nm = _split_name_col(joined["EMPL_NM"])
     refined = pd.concat([refined, empl_nm], axis=1)
     refined["YEAR"] = [year] * len(refined)

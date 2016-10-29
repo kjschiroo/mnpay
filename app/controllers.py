@@ -53,14 +53,14 @@ def add_salary():
     last_name = request.args.get('last_name', "")
     agency = request.args.get('agency', "")
     dept = request.args.get('dept', "")
-    wages = request.args.get('wages', "")
+    wage = request.args.get('wage', "")
     year = request.args.get('year', "")
     title = request.args.get('title', "")
     s = models.Salary(first_name=first_name,
                       last_name=last_name,
                       agency=agency,
                       dept=dept,
-                      wages=wages,
+                      wage=wage,
                       year=year,
                       title=title)
     db.session.add(s)

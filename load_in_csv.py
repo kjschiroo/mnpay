@@ -18,7 +18,7 @@ def main(input_file):
             last_name=row["LAST_NAME"],
             agency=row["AGENCY"],
             dept=row["DEPT"],
-            wages=round(row["WAGES"], 2),
+            wage=round(row["WAGE"], 2),
             year=row["YEAR"],
             title=row["TITLE"]
         ))
