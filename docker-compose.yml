@@ -6,6 +6,8 @@ python:
   build: .
   expose:
     - "8000"
+  links:
+    - mariadb:mariadb
   volumes:
     - .:/usr/src/app
   command: /usr/local/bin/gunicorn -w 2 -b :8000 app:app
@@ -22,3 +24,14 @@ nginx:
     - ./nginx/static:/www/static
   links:
     - python:python
+
+########################
+## MARIADB CONTAINER ##
+########################
+mariadb:
+    restart: always
+    image: mariadb
+    expose:
+        - "5432"
+    environment:
+        - MYSQL_ALLOW_EMPTY_PASSWORD=1
